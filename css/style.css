@@ -158,11 +158,16 @@ section form {
     border: 1px #dc3545 solid;
     border-radius: 3rem;
 
+    font-weight: bold;
+    text-transform: uppercase;
+
+    transition: color 0.7s;
     transition: background-color 0.7s;
 }
 
 #list-items li button.delete:hover {
     background-color: #dc3545;
+    color: white;
     cursor: pointer;
 }
 
