@@ -51,16 +51,19 @@ input {
 
 input::-webkit-input-placeholder {
     color: #46474a;
+    opacity: 0.5;
     transition: color 0.7s;
 }
 
 input::-moz-placeholder {
     color: #46474a;
+    opacity: 0.5;
     transition: color 0.7s;
 }
 
 input:-ms-placeholder {
     color: #46474a;
+    opacity: 0.5;
     transition: color 0.7s;
 }
 
