@@ -1,0 +1,172 @@
+/* Global */
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color: #46474a;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+
+    margin: 0;
+    width: 100%;
+    background-color: #17a2b8;
+    padding: 3rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+}
+
+header .search {
+    text-align: center;
+    margin-right: 5.5rem;
+}
+
+/* Input boxes */
+input {
+    font-size: 1.5rem;
+    padding-left: 1.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 1.5rem;
+    border: 2px #46474a solid;
+}
+
+input::-webkit-input-placeholder {
+    color: #46474a;
+    transition: color 0.7s;
+}
+
+input::-moz-placeholder {
+    color: #46474a;
+    transition: color 0.7s;
+}
+
+input:-ms-placeholder {
+    color: #46474a;
+    transition: color 0.7s;
+}
+
+input:focus {
+    border-radius: 1.5rem;
+    border: 2px #46474a solid;
+    outline: none;
+}
+
+input:focus::-webkit-input-placeholder { 
+    color:transparent;
+}
+
+input:focus::-moz-placeholder {
+    color:transparent;
+}
+
+input:focus:-ms-placeholder {
+    color:transparent;
+}
+
+/* Main Section */
+section {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+
+section form {
+    display: flex;
+    justify-content: center;
+}
+
+/* Create todo button */
+#create-todo-btn {
+    height: 3rem;
+    margin-left: 1rem;
+    min-width: 6rem;
+    background: transparent;
+    border: 2px #28a745 solid;
+    transition: background-color 0.7s;
+    overflow: hidden;
+    border-radius: 1.5rem;
+
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    font-size: 1.1rem;
+}
+
+#create-todo-btn:hover {
+    background-color: #28a745;
+    cursor: pointer;
+}
+
+#create-todo-btn:active, #create-todo-btn:focus {
+    outline: none;
+}
+
+/* list items */
+#list-items {
+    margin: 0 auto;
+    margin-top: 2rem;
+
+    text-decoration: none;
+    list-style-type: none;
+
+    width: 90%;
+}
+
+#list-items li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+
+    margin-bottom: 1rem;
+
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1.2rem;
+    
+    font-size: 1.8rem;
+
+    border: 2px #46474a solid;
+    border-radius: 1.5rem;
+}
+
+#list-items li button.delete {
+    margin-right: 1.5rem;
+
+    width: 3rem;
+    height: 3rem;
+
+    background: transparent;
+
+    border: 1px #dc3545 solid;
+    border-radius: 3rem;
+
+    transition: background-color 0.7s;
+}
+
+#list-items li button.delete:hover {
+    background-color: #dc3545;
+    cursor: pointer;
+}
+
+#list-items li button.delete:active,
+#list-items li button.delete:focus {
+    outline: none;
+}
