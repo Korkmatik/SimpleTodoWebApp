@@ -6,6 +6,7 @@ var addTodoBtn = document.querySelector('#create-todo-btn');
 var deleteButtons = document.querySelectorAll('.delete');
 
 searchInput.addEventListener('input', search);
+newTodoInput.addEventListener('keyup', newTodoKeyUp);
 addTodoBtn.addEventListener('click', addTodoAndClearInput);
 deleteButtons.forEach(btn => btn.addEventListener('click', deleteItem));
 
@@ -27,6 +28,13 @@ function search(e) {
 }
 
 /* Adding a Todo */
+function newTodoKeyUp(e) {
+    e.preventDefault();
+    if (e.key == 'Enter') {
+        addTodoAndClearInput(e);
+    }
+}
+
 function addTodoAndClearInput(e) {
     addTodoToList(newTodoInput.value);
     clearInput();
@@ -71,6 +79,7 @@ function clearInput() {
     newTodoInput.value = "";
 }
 
+/* Deleting an item from the todo list */
 function deleteItem(event) {
     event.target.parentElement.remove();
 }
