@@ -3,9 +3,11 @@ var listUl = document.querySelector('#list-items');
 var listItems = document.querySelectorAll('#list-items li');
 var newTodoInput = document.querySelector('#new-todo');
 var addTodoBtn = document.querySelector('#create-todo-btn');
+var deleteButtons = document.querySelectorAll('.delete');
 
 searchInput.addEventListener('input', search);
 addTodoBtn.addEventListener('click', addTodoAndClearInput);
+deleteButtons.forEach(btn => btn.addEventListener('click', deleteItem));
 
 
 /* Searching for a Todo */
@@ -50,6 +52,7 @@ function createContentSpan(todo) {
 function createDeleteBtn() {
     deleteBtn = document.createElement("button");
     deleteBtn.classList.add("delete");
+    deleteBtn.addEventListener('click', deleteItem);
     deleteBtn.setAttribute('type', 'button');
     deleteBtn.appendChild(document.createTextNode("X"));
 
@@ -66,4 +69,8 @@ function createTodoNode(contentSpan, deleteBtn) {
 
 function clearInput() {
     newTodoInput.value = "";
+}
+
+function deleteItem(event) {
+    event.target.parentElement.remove();
 }
